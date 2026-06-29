@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Supermarket.core/Supermarket.core.csproj" />
+  <Project Path="Supermarket.Data/Supermarket.Data.csproj" />
+  <Project Path="Supermarket.Tests/Supermarket.Tests.csproj" />
+  <Project Path="Supermarket/Supermarket.csproj" />
+</Solution>
