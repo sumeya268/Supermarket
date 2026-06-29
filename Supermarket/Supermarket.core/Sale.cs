@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Supermarket.core
 {
-    internal class Sale
+    public class Sale
     {
+        public int Id { get; set;}
+        public DateTime Date { get; set; }
+        public decimal TotalAmount { get; set; }
+        public List<SaleItem> Items { get; set; } = new();
     }
 }
