@@ -1,7 +1,6 @@
 ﻿using Supermarket.core;
-using System;
 
-namespace Supermarket.Core
+namespace Supermarket.core
 {
     public class ProductList
     {
@@ -64,11 +63,17 @@ namespace Supermarket.Core
             return false;
         }
 
+        public Product GetAt( int index)
+        {  
+            return items[index];
+        }
+
         public Product? LinearSearchByName(string name)
         {
             for (int i = 0; i < count; i++)
             {
-                if (items[i].Title.Equals(name, StringComparison.OrdinalIgnoreCase))
+                if (items[i].Title != null &&
+                    items[i].Title.Equals(name, StringComparison.OrdinalIgnoreCase))
                     return items[i];
             }
             return null;
@@ -90,7 +95,7 @@ namespace Supermarket.Core
             }
         }
 
-        public Product BinarySearchByBarcode(string barcode)
+        public Product? BinarySearchByBarcode(string barcode)
         {
             SortByBarcode();
 
