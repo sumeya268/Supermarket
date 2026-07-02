@@ -118,5 +118,26 @@ namespace Supermarket.core
 
             return null;
         }
+
+        public Product LinearSearchById(int id)
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                if (items[i].Id == id)
+                    return items[i];
+            }
+            return null;
+        }
+
+        public Product LinearSearchByBarcode (string barcode)
+        {
+            for ( int i = 0; i < Count; i++)
+            {
+                if (items[i].Barcode == barcode)
+                    return items[i];
+
+            }
+            return null; 
+        }
     }
 }
